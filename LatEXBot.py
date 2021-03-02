@@ -46,7 +46,7 @@ def plot_equation(eq, fontsize=50, outfile="test", padding=0.1, **kwargs):
     ax.grid(False)
     ax.set_axis_off()
 
-    #outfile_name = "test" + str(np.random.rand_int(1,1000000))
+    
     if outfile is not None:
         plt.savefig(outfile, **kwargs)
 
@@ -63,7 +63,7 @@ async def on_ready():
 @client.command()
 async def tex(ctx):
 	image = plot_equation(ctx.message.content)
-	await ctx.send(file=discord.File(r'C:\Users\andre\Desktop\LaTeXBot\test.png'))
+	await ctx.send(file=discord.File(r'path\to\file.png'))
 
 
 
